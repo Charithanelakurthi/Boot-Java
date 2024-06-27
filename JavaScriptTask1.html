@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript-Task1</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" , content="width=device-width , intial-scale = 1.0" />
+    </head>
+    <body>
+        <p id="p1"></p>
+        <script>
+            function reverseNumber(num){
+                let str=num.toString();
+                let reverseString=str.split('').reverse().join('');
+                let reverseNum=parseInt(reverseString);
+                return  reverseNum;
+
+            }
+            reversedNum=reverseNumber(32243);
+            document.getElementById("p1").innerHTML=reversedNum;
+        </script>
+    </body>
+</html>

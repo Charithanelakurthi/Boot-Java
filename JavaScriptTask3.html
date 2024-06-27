@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" , content="width=device-width , intial-scale = 1.0" />
+        <title>JavaScript-Task3</title>
+        <style>
+            label{
+                margin:5px;
+            }
+            input{
+                margin:5px;
+            }
+            div{
+                border:1px solid black;
+                width:300px;
+                height:150px;
+            }
+            p{
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form>
+                <label for="one">1st Number:</label>
+                <input type="number" id="one" name="one" placeholder="enter first number.." value="input()"><br>
+                <label for="two">2st Number:</label>
+                <input type="number" id="two" name="two" placeholder="enter second number.." value="input2()"><br>
+                <input type="button" value="multiply" onclick="calculate('multiply')">
+                <input type="button" value="divide" onclick="calculate('divide')">
+                
+            </form>
+            <p id="p1"> </p>
+        </div>
+        <script>
+            function calculate(operation){
+                var num1=document.getElementById('one').value;
+                var num2=document.getElementById('two').value;
+                var number1=parseFloat(num1);
+                var number2=parseFloat(num2);
+                var result;
+                if (operation==='multiply'){
+                    result=number1*number2;
+                }
+                else if(operation='divide'){
+                    if(num2===0){
+                        result='cant divide by zero';
+                    }
+                    else{
+                        result=num1/num2;
+                    }
+                }
+                document.getElementById('p1').innerHTML='The Result is '+ '<br>'+result;
+            }
+            
+
+            
+
+        </script>
+      
+    </body>
+</html>
