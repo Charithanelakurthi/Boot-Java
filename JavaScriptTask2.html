@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" , content="width=device-width , intial-scale = 1.0" />
-        <title>JavaScript-Task2</title>
-    </head>
-    <body>
-        <p id="p1"></p>
-        <script>
-            function sorting(str){
-                let sortStr=str.split('').sort().join('');
-                return sortStr;
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-            }
-            let sortedStr=sorting("webmaster");
-            document.getElementById("p1").innerHTML=sortedStr;
-        </script>
-    </body>
+<body>
+    <h2>Sort String Alphabetically</h2>
+    <p>Enter a string to sort:</p>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="sortAndDisplay()">Sort</button>
+    <p>Sorted string:</p>
+    <div id="output"></div>
+
+    <script>
+        function sortString(str) {
+            return str.split('').sort().join('');
+        }
+
+        function sortAndDisplay() {
+            let inputString = document.getElementById('inputString').value;
+            let sortedString = sortString(inputString);
+            document.getElementById('output').textContent = sortedString;
+        }
+    </script>
+</body>
+
 </html>
